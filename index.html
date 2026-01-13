@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>メニュー</title>
+
+    <!-- 共通スタイル読み込み -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>メニュー</h1>
+
+<!-- 練習問題 -->
+<div class="menu-box">
+    <!-- 練習問題ボタン -->
+    <button id="practiceBtn" class="menu-btn">練習問題</button>
+
+    <!-- 説明文 -->
+    <p>3つのシチュエーションを選び、それに特化した練習ができます。</p>
+</div>
+
+<!-- ランダム問題 -->
+<div class="menu-box">
+    <!-- ランダム問題ボタン -->
+    <button id="randomBtn" class="menu-btn">ランダム問題</button>
+
+    <!-- 説明文 -->
+    <p>3つのシチュエーションがランダムに出題されます。腕試し、苦手チェックにどうぞ。</p>
+</div>
+
+<script>
+/*
+  練習問題を押したとき
+  ・mode に "scenario" を保存
+  ・シチュエーション選択画面へ遷移
+*/
+document.getElementById("practiceBtn").onclick = () => {
+    localStorage.setItem("mode", "scenario");
+    location.href = "scenario.html";
+};
+
+/*
+  ランダム問題を押したとき
+  ・mode に "random" を保存
+  ・直接問題画面へ遷移
+*/
+document.getElementById("randomBtn").onclick = () => {
+    localStorage.setItem("mode", "random");
+    location.href = "question.html";
+};
+</script>
+
+</body>
+</html>
