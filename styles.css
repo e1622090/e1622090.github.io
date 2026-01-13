@@ -68,3 +68,64 @@ body {
     white-space: pre-wrap;
     font-size: 16px;
 }
+
+
+/* ================================
+    スマホ画面対応
+   ================================ */
+@media (max-width: 768px) {
+
+    /* 全体余白を少し詰める */
+    body {
+        margin: 10px;
+    }
+
+    /* ボタンを画面幅いっぱいに */
+    .menu-btn,
+    .scenario-btn,
+    .btn-area button {
+        width: 100%;
+        margin: 6px 0;
+        font-size: 18px;
+    }
+
+    /* 操作ボタンを縦並びに */
+    .btn-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* タイトルへ・タイマーを画面内に収める */
+    .title-btn {
+        position: fixed;
+        top: 8px;
+        right: 8px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .timer {
+        position: fixed;
+        top: 8px;
+        left: 8px;
+        font-size: 18px;
+    }
+
+    /* 遅延メッセージ位置調整 */
+    .slow-msg {
+        top: 36px;
+        font-size: 16px;
+    }
+
+    /* 問題文が被らないように */
+    #questionText {
+        margin-top: 80px;
+        font-size: 18px;
+    }
+
+    /* 結果・採点欄 */
+    .result-box,
+    .judge-box {
+        font-size: 16px;
+    }
+}
