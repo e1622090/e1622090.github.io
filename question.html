@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- タイトルへ戻るボタン（右上固定） -->
+<button id="titleBtn" class="title-btn">タイトルへ</button>
+
+<!-- タイマー表示（左上） -->
+<div id="timer" class="timer">00:00</div>
+<div id="slowMsg" class="slow-msg"></div>
+
+<!-- 問題文表示 -->
+<h2 id="questionText">問題を読み込み中...</h2>
+
+<!-- 音声認識結果表示 -->
+<div id="resultText" class="result-box"></div>
+
+<!-- ▼ 採点・解答表示枠（追加） -->
+<div id="judgeBox" class="judge-box">
+    <h3>採点結果</h3>
+    <div id="judgeResult"></div>
+</div>
+
+<!-- 操作ボタン -->
+<div class="btn-area">
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+    <button id="resetBtn">Reset</button>
+    <button id="nextBtn">次へ</button>
+</div>
+
+
+
+<!-- JavaScript 読み込み（順番重要） -->
+<script src="data.js"></script>
+<script src="speech.js"></script>
+<script src="timer.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
