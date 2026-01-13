@@ -1,0 +1,70 @@
+/* 全体共通 */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+/* メニュー用 */
+.menu-box {
+    margin: 20px 0;
+}
+
+.menu-btn,
+.scenario-btn,
+.btn-area button {
+    padding: 12px 24px;
+    margin: 8px;
+    font-size: 18px;
+}
+
+/* タイトルへ */
+.title-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* タイマー */
+.timer {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#questionText {
+    margin-top: 120px;  /* タイマー分だけ下げる */
+}
+
+
+/* 遅延メッセージ */
+.slow-msg {
+    position: absolute;
+    left: 20px;
+    top: 60px;
+    color: red;
+    font-size: 20px;
+}
+
+/* 音声認識結果 */
+.result-box {
+    border: 1px solid #aaa;
+    padding: 12px;
+    min-height: 120px;
+    margin: 20px 0;
+    white-space: pre-wrap;
+}
+
+/* 採点枠 */
+.judge-box {
+    border: 2px solid #666;
+    padding: 12px;
+    margin-top: 16px;
+    background: #f9f9f9;
+}
+
+#judgeResult {
+    white-space: pre-wrap;
+    font-size: 16px;
+}
