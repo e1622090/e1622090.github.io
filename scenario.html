@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シチュエーション選択</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>シチュエーションを選択</h1>
+
+<!-- 各シチュエーションボタン -->
+<button class="scenario-btn" id="R">来客対応</button>
+<button class="scenario-btn" id="P">電話対応</button>
+<button class="scenario-btn" id="T">先方訪問</button>
+
+<script>
+/*
+  シチュエーションを選択したとき
+  ・mode に R / P / T を保存
+  ・問題画面へ移動
+*/
+function select(mode) {
+    localStorage.setItem("mode", mode);
+    location.href = "question.html";
+}
+
+document.getElementById("R").onclick = () => select("R");
+document.getElementById("P").onclick = () => select("P");
+document.getElementById("T").onclick = () => select("T");
+</script>
+
+</body>
+</html>
