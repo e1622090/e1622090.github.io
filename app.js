@@ -1,3 +1,9 @@
+// question.html 直アクセス対策
+if (!localStorage.getItem("mode")) {
+    location.href = "index.html";
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     if (!document.getElementById("questionText")) {
