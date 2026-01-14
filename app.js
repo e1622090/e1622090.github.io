@@ -1,8 +1,22 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (!document.getElementById("questionText")) {
+        return;
+    }
+
+
+if (!document.getElementById("questionText")) {
+    return;
+}
+
+
+
 // タイトルへ戻る
 document.getElementById("titleBtn").onclick = () => {
 
     // ★ 前回の問題IDを完全にクリア
     localStorage.removeItem("currentProblem");
+    localStorage.removeItem("mode");
     // タイトルへ戻る
     window.location.href = "index.html";
 };
@@ -265,4 +279,4 @@ function judgeTextByRule(problemId, text) {
     }
 }
 
-
+});
