@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <link rel="canonical" href="https://e1622090.github.io/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シチュエーション選択</title>
+    <title>メニュー</title>
+
+    <!-- 共通スタイル読み込み -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>シチュエーションを選択</h1>
+<h1>メニュー</h1>
 
-<!-- 各シチュエーションボタン -->
-<button class="scenario-btn" id="R">来客対応</button>
-<button class="scenario-btn" id="P">電話対応</button>
-<button class="scenario-btn" id="T">先方訪問</button>
+<!-- 練習問題 -->
+<div class="menu-box">
+    <!-- 練習問題ボタン -->
+    <button id="practiceBtn" class="menu-btn">練習問題</button>
+
+    <!-- 説明文 -->
+    <p>3つのシチュエーションを選び、それに特化した練習ができます。</p>
+</div>
+
+<!-- ランダム問題 -->
+<div class="menu-box">
+    <!-- ランダム問題ボタン -->
+    <button id="randomBtn" class="menu-btn">ランダム問題</button>
+
+    <!-- 説明文 -->
+    <p>3つのシチュエーションがランダムに出題されます。腕試し、苦手チェックにどうぞ。</p>
+</div>
 
 <script>
 /*
-  シチュエーションを選択したとき
-  ・mode に R / P / T を保存
-  ・問題画面へ移動
+  練習問題を押したとき
+  ・mode に "scenario" を保存
+  ・シチュエーション選択画面へ遷移
 */
-function select(mode) {
-    localStorage.setItem("mode", mode);
-    location.href = "question.html";
-}
+document.getElementById("practiceBtn").onclick = () => {
+    localStorage.setItem("mode", "scenario");
+    location.href = "scenario.html";
+};
 
-document.getElementById("R").onclick = () => select("R");
-document.getElementById("P").onclick = () => select("P");
-document.getElementById("T").onclick = () => select("T");
+/*
+  ランダム問題を押したとき
+  ・mode に "random" を保存
+  ・直接問題画面へ遷移
+*/
+document.getElementById("randomBtn").onclick = () => {
+    localStorage.setItem("mode", "random");
+    location.href = "question.html";
+};
 </script>
 
 </body>
